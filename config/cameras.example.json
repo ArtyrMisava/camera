@@ -1,0 +1,80 @@
+{
+  "server": {
+    "port": 8080,
+    "title": "Видеонаблюдение Amatek"
+  },
+  "defaults": {
+    "segmentSeconds": 2
+  },
+  "groups": ["Периметр", "Вход", "Демо"],
+  "cameras": [
+    {
+      "id": "nvr-perimeter-1",
+      "name": "Периметр — вход",
+      "group": "Периметр",
+      "vendor": "amatek-nvr",
+      "host": "192.168.1.88",
+      "port": 554,
+      "username": "admin",
+      "password": "CHANGE_ME",
+      "channel": 1,
+      "stream": 0,
+      "notes": "NVR F-серии: rtsp://user:pass@ip:554/00",
+      "enabled": false
+    },
+    {
+      "id": "nvr-perimeter-2",
+      "name": "Периметр — ворота",
+      "group": "Периметр",
+      "vendor": "amatek-nvr",
+      "host": "192.168.1.88",
+      "port": 554,
+      "username": "admin",
+      "password": "CHANGE_ME",
+      "channel": 2,
+      "stream": 0,
+      "enabled": false
+    },
+    {
+      "id": "nvr-lobby-1",
+      "name": "Вход — холл",
+      "group": "Вход",
+      "vendor": "amatek-nvr",
+      "host": "192.168.1.88",
+      "port": 554,
+      "username": "admin",
+      "password": "CHANGE_ME",
+      "channel": 3,
+      "stream": 1,
+      "enabled": false
+    },
+    {
+      "id": "ipcam-office",
+      "name": "IP-камера — офис (XMEye)",
+      "group": "Вход",
+      "vendor": "amatek-xmeye",
+      "host": "192.168.1.10",
+      "port": 554,
+      "username": "admin",
+      "password": "CHANGE_ME",
+      "channel": 1,
+      "stream": 0,
+      "enabled": false,
+      "notes": "XMEye: rtsp://host:554/user=admin&password=...&channel=1&stream=0.sdp"
+    },
+    {
+      "id": "demo-1",
+      "name": "Демо стенд · улица",
+      "group": "Демо",
+      "demo": true,
+      "enabled": true
+    },
+    {
+      "id": "demo-2",
+      "name": "Демо стенд · склад",
+      "group": "Демо",
+      "demo": true,
+      "enabled": true
+    }
+  ]
+}

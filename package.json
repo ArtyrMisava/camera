@@ -1,0 +1,24 @@
+{
+  "name": "amatek-camera-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Веб-приложение для просмотра IP-камер и регистраторов Amatek (RTSP -> HLS в браузере)",
+  "type": "module",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node --no-warnings server/index.js",
+    "dev": "node --no-warnings --watch server/index.js",
+    "seed:demo": "node --no-warnings scripts/seed-demo.js",
+    "vendor": "node scripts/vendor.js",
+    "test": "node --no-warnings scripts/rtsp-test.mjs",
+    "postinstall": "node scripts/vendor.js"
+  },
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "@ffprobe-installer/ffprobe": "^2.1.2",
+    "express": "^4.19.2",
+    "hls.js": "^1.5.17"
+  }
+}

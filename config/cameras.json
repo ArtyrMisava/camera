@@ -1,0 +1,30 @@
+{
+  "server": {
+    "port": 8080,
+    "title": "Видеонаблюдение Amatek"
+  },
+  "defaults": {
+    "segmentSeconds": 2
+  },
+  "groups": [
+    "Периметр",
+    "Вход",
+    "Демо"
+  ],
+  "cameras": [
+    {
+      "id": "demo-1",
+      "name": "Демо стенд · улица",
+      "group": "Демо",
+      "demo": true,
+      "enabled": true
+    },
+    {
+      "id": "demo-2",
+      "name": "Демо стенд · склад",
+      "group": "Демо",
+      "demo": true,
+      "enabled": true
+    }
+  ]
+}
